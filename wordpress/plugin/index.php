@@ -14,7 +14,7 @@ function render_embedded_html_header()
 
 function render_embedded_html_body()
 {
-  $apiKey = esc_attr(get_option('podmind_apikey'));
+  $apiKey = esc_attr(get_option('apiKey'));
   return '<voxgig-podmind-ask apikey="' . $apiKey . '" debug="true"></voxgig-podmind-ask>';
 }
 

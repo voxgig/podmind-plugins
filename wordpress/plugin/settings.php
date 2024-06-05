@@ -13,7 +13,7 @@ function option_page()
 
 function settings()
 {
-  register_setting('podmind-settings-group', 'podmind_apikey');
+  register_setting('podmind-settings-group', 'apiKey');
 
   add_settings_section(
     'podmind-section',
@@ -23,7 +23,7 @@ function settings()
   );
 
   add_settings_field(
-    'podmind_apikey',
+    'apiKey',
     'API Key:',
     'api_key_field',
     'podmind-settings-group',
@@ -33,8 +33,8 @@ function settings()
 
 function api_key_field()
 {
-  $apiKey = esc_attr(get_option('podmind_apikey'));
-  echo '<input type="text" style="width: 35rem" name="podmind_apikey" value="' . $apiKey . '" />';
+  $apiKey = esc_attr(get_option('apiKey'));
+  echo '<input type="text" style="width: 35rem" name="apiKey" value="' . $apiKey . '" />';
 }
 
 function options()
@@ -42,7 +42,7 @@ function options()
 ?>
   <div class="wrap">
     <h2>Podmind Settings</h2>
-    <form style="width: 41rem" method="post" action="options.php">
+    <form method="post" action="options.php">
       <?php
       settings_fields('podmind-settings-group');
       do_settings_sections('podmind-settings-group');
