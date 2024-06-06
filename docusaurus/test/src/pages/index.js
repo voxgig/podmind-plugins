@@ -10,6 +10,7 @@ export default function Home() {
       <Head>
         <script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js"></script>
       </Head>
+
       <div className={styles.container}>
         <Heading as="h1">
           Podmind Test
@@ -17,7 +18,7 @@ export default function Home() {
 
         <div className={styles.widget}>
           <voxgig-podmind-ask
-            apikey="057c478f84c642caab3ff71c0f879cceeb8e362d41414bb9b09fc6389f2ebfff"
+            apikey="your-api-key"
             debug="true"
           >
           </voxgig-podmind-ask>
