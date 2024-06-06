@@ -1,0 +1,17 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+}
+
+.widget {
+  margin-top: 2rem;
+  max-width: 45rem;
+  width: 100%;
+}
