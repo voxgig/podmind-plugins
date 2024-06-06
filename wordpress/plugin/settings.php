@@ -1,51 +1,51 @@
 <?php
 
-function option_page()
+function podw_option_page()
 {
   add_options_page(
     null,
-    'Podmind',
+    'Podmind Widget',
     'manage_options',
     null,
-    'options'
+    'podw_options'
   );
 }
 
-function settings()
+function podw_settings()
 {
-  register_setting('podmind-settings-group', 'apiKey');
+  register_setting('podw-settings-group', 'podw_apiKey');
 
   add_settings_section(
-    'podmind-section',
+    'podw-section',
     null,
     null,
-    'podmind-settings-group'
+    'podw-settings-group'
   );
 
   add_settings_field(
-    'apiKey',
+    'podw_apiKey',
     'API Key:',
-    'api_key_field',
-    'podmind-settings-group',
-    'podmind-section'
+    'podw_api_key_field',
+    'podw-settings-group',
+    'podw-section'
   );
 }
 
-function api_key_field()
+function podw_api_key_field()
 {
-  $apiKey = esc_attr(get_option('apiKey'));
-  echo '<input type="text" style="width: 35rem" name="apiKey" value="' . $apiKey . '" />';
+  $podw_apiKey = esc_attr(get_option('podw_apiKey'));
+  echo '<input type="text" style="width: 35rem" name="podw_apiKey" value="' . $podw_apiKey . '" />';
 }
 
-function options()
+function podw_options()
 {
 ?>
   <div class="wrap">
-    <h2>Podmind Settings</h2>
+    <h2>Podmind Widget Settings</h2>
     <form method="post" action="options.php">
       <?php
-      settings_fields('podmind-settings-group');
-      do_settings_sections('podmind-settings-group');
+      settings_fields('podw-settings-group');
+      do_settings_sections('podw-settings-group');
       submit_button();
       ?>
     </form>
@@ -53,6 +53,6 @@ function options()
 <?php
 }
 
-add_action('admin_menu', 'option_page');
+add_action('admin_menu', 'podw_option_page');
 
-add_action('admin_init', 'settings');
+add_action('admin_init', 'podw_settings');
