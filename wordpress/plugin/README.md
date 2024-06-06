@@ -1,6 +1,6 @@
 # Podmind Plugin
 
-- The plugin is in the initial stages of development. Thus, it isn't available on https://wordpress.org/plugins/.
+- The plugin is in the initial stages of development. Thus, it isn't yet available on WordPress.org website.
 - To install it, generate and upload the source code zip file.
 
 ## Install
@@ -8,15 +8,15 @@
 - Generate a zip file from source files. For example:
 ```bash
 cd podmind-plugins/wordpress/plugin
-zip podmind.zip *
+zip podmind_widget.zip *
 ```
 - Go to your WordPress dashboard, click on **Plugings**, then **Add New Plugin**;
 - Click on **Upload Plugin**, then **Choose File**;
-- Upload the generated zip file (e.g. podmind.zip), then click on **Install Now**;
+- Upload the generated zip file (e.g. podmind_widget.zip), then click on **Install Now**;
 - Once the plugin is successfully installed, click on **Activate Plugin**.
 
 ## Add API Key
 
 - Once you have installed, go to the WordPress dashboard and click on **Settings**;
-- Then, click on the option **Podmind**;
+- Then, click on the option **Podmind Widget**;
 - Paste your API key in the field **API KEY**, then click on **Saved Changes**.

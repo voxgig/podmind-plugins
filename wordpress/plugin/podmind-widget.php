@@ -10,6 +10,10 @@
  * Text Domain:       podmind-widget-plugin
  */
 
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly
+}
+
 require 'settings.php';
 
 function podw_render_embedded_html_header()
