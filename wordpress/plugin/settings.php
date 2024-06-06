@@ -2,6 +2,27 @@
 if (!class_exists('PodW_Setting')) {
   class PodW_Setting
   {
+    public static function get_page_content()
+    {
+?>
+      <div class="wrap">
+        <h2>Podmind Widget Settings</h2>
+        <form method="post" action="options.php">
+          <?php
+          settings_fields('podw-settings-group');
+          do_settings_sections('podw-settings-group');
+          submit_button();
+          ?>
+        </form>
+      </div>
+<?php
+    }
+
+    public static function echo_api_key_field()
+    {
+      $podw_apiKey = esc_attr(get_option('podw_apiKey'));
+      echo '<input type="text" style="width: 35rem" name="podw_apiKey" value="' . $podw_apiKey . '" />';
+    }
 
     public static function set_option_page()
     {
@@ -32,28 +53,6 @@ if (!class_exists('PodW_Setting')) {
         'podw-settings-group',
         'podw-section'
       );
-    }
-
-    public static function echo_api_key_field()
-    {
-      $podw_apiKey = esc_attr(get_option('podw_apiKey'));
-      echo '<input type="text" style="width: 35rem" name="podw_apiKey" value="' . $podw_apiKey . '" />';
-    }
-
-    public static function get_page_content()
-    {
-?>
-      <div class="wrap">
-        <h2>Podmind Widget Settings</h2>
-        <form method="post" action="options.php">
-          <?php
-          settings_fields('podw-settings-group');
-          do_settings_sections('podw-settings-group');
-          submit_button();
-          ?>
-        </form>
-      </div>
-<?php
     }
   }
 
