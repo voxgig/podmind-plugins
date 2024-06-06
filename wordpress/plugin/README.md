@@ -1,6 +1,6 @@
 # Podmind Plugin
 
-- The plugin is in the initial stages of development. Thus, it isn't yet available on WordPress.org website.
+- The plugin is in the initial stages of development. Thus, it has yet to be available on the WordPress.org website.
 - To install it, generate and upload the source code zip file.
 
 ## Install
