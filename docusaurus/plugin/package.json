@@ -1,0 +1,23 @@
+{
+  "name": "@voxgig/podw-docusaurus",
+  "version": "1.0.0",
+  "description": "Docusaurus plugin to use the Podmind widget",
+  "main": "dist/PodW.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "3.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.4.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "vite": "^5.2.12"
+  },
+  "author": "",
+  "license": "ISC"
+}
