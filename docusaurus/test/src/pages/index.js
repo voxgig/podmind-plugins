@@ -1,7 +1,4 @@
 import Heading from '@theme/Heading';
-import Head from '@docusaurus/Head';
-import PodW from '@voxgig/podw-docusaurus';
-
 import styles from './index.module.css';
 
 
@@ -13,7 +10,11 @@ export default function Home() {
           Podmind Test
         </Heading>
 
-        <PodW Head={Head} apikey="your-api-key" debug="true" />
+        <voxgig-podmind-ask
+          apikey="your-api-key"
+          debug="true"
+        >
+        </voxgig-podmind-ask>
       </div>
     </>
   );
