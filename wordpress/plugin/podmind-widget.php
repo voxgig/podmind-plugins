@@ -24,14 +24,22 @@ if (!class_exists('PodW_Plugin')) {
       echo '<script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js"></script>';
     }
 
-    public static function get_widget_element()
+    public static function get_widget_element($content)
     {
-      $podw_apiKey = esc_attr(get_option('podw_apiKey'));
-      return '<voxgig-podmind-ask apikey="' . $podw_apiKey . '" debug="true"></voxgig-podmind-ask>';
+      global $post;
+      $currentPageId = $post->ID;
+      $selectedPageId = esc_attr(get_option('podw_page'));
+
+      if ($currentPageId == $selectedPageId) {
+        $podw_apiKey = esc_attr(get_option('podw_apiKey'));
+        $content .= '<voxgig-podmind-ask apikey="' . $podw_apiKey . '" debug="true"></voxgig-podmind-ask>';
+      }
+
+      return $content;
     }
   }
 
   add_action('wp_head', ['PodW_Plugin', 'echo_script_header']);
 
-  add_action('the_content', ['PodW_Plugin', 'get_widget_element']);
+  add_filter('the_content', ['PodW_Plugin', 'get_widget_element']);
 }
