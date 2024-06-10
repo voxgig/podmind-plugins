@@ -18,7 +18,7 @@ export default defineConfig({
       target: 'es6',
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@docusaurus/core'],
       output: {
         globals: {
           react: 'React',
