@@ -32,9 +32,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  plugins: [
-    '@voxgig/podw-docusaurus',
-  ],
+  plugins: [],
   presets: [
     [
       'classic',

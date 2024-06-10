@@ -1,5 +1,7 @@
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import PodW from '@voxgig/podw-docusaurus'
+import Head from '@docusaurus/Head';
 
 
 export default function Home() {
@@ -10,11 +12,10 @@ export default function Home() {
           Podmind Test
         </Heading>
 
-        <voxgig-podmind-ask
+        <PodW
+          Head={Head}
           apikey="your-api-key"
-          debug="true"
-        >
-        </voxgig-podmind-ask>
+          debug="true" />
       </div>
     </>
   );
