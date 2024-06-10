@@ -1,5 +1,4 @@
 import React from 'react';
-// import Head from '@docusaurus/Head';
 
 export default function PodW({ Head, apikey, debug }) {
   return (
