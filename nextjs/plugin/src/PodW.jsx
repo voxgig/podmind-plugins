@@ -9,7 +9,7 @@ export default function PodW({ apikey, debug }) {
 
       <voxgig-podmind-ask
         apikey={apikey}
-        debug={debug ? "true" : "false"}
+        debug={debug}
       >
       </voxgig-podmind-ask>
     </>
