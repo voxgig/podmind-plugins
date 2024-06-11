@@ -65,7 +65,7 @@ export default function Home() {
 ```javascript
 <PodW
  apikey="your-api-key"
- debug
+ debug="true"
 />
 
 //or 
@@ -81,5 +81,5 @@ debug="true"
 ```bash
 apikey: "your-api-key"
 debug: true
-mark: "20e1a7d5"
+mark: "20i1a7d5"
 ```
