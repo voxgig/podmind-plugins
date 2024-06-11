@@ -5,7 +5,9 @@ To integrate the Podmind widget into your Next.js application, you can:
 - Install the `@voxgig/podw-next` npm package
 - Or add the widget code manually
 
-## Use NPM lib
+## Install
+
+### NPM Package
 - In your app root directory, run:
 ```bash
 npm i @voxgig/podw-next 
@@ -26,7 +28,7 @@ export default function Home() {
 ```
 - Highliting the use of the `'use client'` [directive from React](https://nextjs.org/docs/app/building-your-application/rendering/client-components#using-client-components-in-nextjs).
 
-## Manual Integration
+### Manual Integration
 - Import the [Next.js Script](https://nextjs.org/docs/app/api-reference/components/script) component into the Next.js page component:
 ```javascript
 import Script from "next/script"
