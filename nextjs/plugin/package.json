@@ -1,13 +1,19 @@
 {
   "name": "@lmscunha/podw-next",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Next.js component to use the Podmind widget",
-  "main": "./dist/pdw-next.umd.js",
-  "module": "./dist/podw-next.mjs",
-  "types": "./dist/voxgig-model-react.d.ts",
+  "main": "dist/pdw-next.umd.js",
+  "module": "dist/podw-next.mjs",
+  "types": "dist/voxgig-model-react.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "dist/podw-next.mjs",
+      "require": "dist/pdw-next.umd.js"
+    }
+  },
   "scripts": {
     "test": "echo test",
     "build": "vite build",
@@ -31,6 +37,5 @@
     "vite": "^5.2.13",
     "vite-plugin-dts": "^3.9.1"
   },
-  "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
