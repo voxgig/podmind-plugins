@@ -1,11 +1,19 @@
 {
   "name": "@voxgig/podw-next",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Next.js component to use the Podmind widget",
-  "main": "dist/pdw-next.umd.js",
-  "module": "dist/podw-next.mjs",
+  "main": "./dist/pdw-next.umd.js",
+  "module": "./dist/podw-next.mjs",
+  "types": "./dist/voxgig-model-react.d.ts",
   "scripts": {
-    "build": "vite build"
+    "test": "echo test",
+    "build": "vite build",
+    "clean": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "reset": "npm run clean && npm install && npm run build && npm run test",
+    "repo-check": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && [[ '' == `git tag --list v${REPO_VERSION}` ]]",
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push && git tag v$REPO_VERSION && git push --tags;",
+    "repo-publish": "npm run repo-check && npm run clean && npm install --registry https://registry.npmjs.org && npm run build && npm test && npm run repo-tag && npm publish --registry https://registry.npmjs.org",
+    "repo-publish-quick": "npm run repo-check && npm run build && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public"
   },
   "peerDependencies": {
     "next": "^14.2.3",
