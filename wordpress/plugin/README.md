@@ -1,22 +1,29 @@
-# Podmind Plugin
+# Wordpress Podmind Widget
 
-- The plugin is in the initial stages of development. Thus, it has yet to be available on the WordPress.org website.
+- The plugin is in the development stage.
 - To install it, generate and upload the source code zip file.
 
-## Install
+## Install Zip
 
 - Generate a zip file from source files. For example:
 ```bash
 cd podmind-plugins/wordpress/plugin
 zip podmind_widget.zip *
 ```
-- Go to your WordPress dashboard, click on **Plugings**, then **Add New Plugin**;
+- Go to your WordPress dashboard, click on **Plugings**, then **Add New Plugin**:
 - Click on **Upload Plugin**, then **Choose File**;
 - Upload the generated zip file (e.g. podmind_widget.zip), then click on **Install Now**;
-- Once the plugin is successfully installed, click on **Activate Plugin**.
+- Once the plugin is successfully installed, click on **Activate Plugin**:
 
-## Add API Key
 
-- Once you have installed, go to the WordPress dashboard and click on **Settings**;
-- Then, click on the option **Podmind Widget**;
-- Paste your API key in the field **API KEY**, then click on **Saved Changes**.
+## Settings
+
+- To access the plugin settings page, please go to `Settings` -> `Podming Widget`;
+- **API KEY** - The API key provided by Voxgig.
+- **Container CSS** - Adds style to the widget container (e.g. color: blue).
+- **Debug Mode** - Loggs the widget properties. For example:
+```bash
+apikey: "your-api-key"
+debug: true
+mark: "20e1a7d5"
+```
