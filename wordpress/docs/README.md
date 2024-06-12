@@ -20,7 +20,8 @@ zip podmind_widget.zip *
 
 - To access the plugin settings page, please go to `Settings` -> `Podming Widget`;
 - **API KEY** - The API key provided by Voxgig.
-- **Container CSS** - Adds style to the widget container (e.g. color: blue).
+- **Container CSS** - Adds style to the widget container (e.g. color: blue). 
+Please click here to see the [allowed attributes](https://github.com/WordPress/wordpress-develop/blob/9d11cee11e7d2d01101fbe0fd6d8f03634021c8c/src/wp-includes/kses.php#L2331).
 - **Debug Mode** - Loggs the widget properties. For example:
 ```bash
 apikey: "your-api-key"
