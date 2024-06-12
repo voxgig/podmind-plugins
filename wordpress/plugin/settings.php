@@ -24,19 +24,6 @@ if (!class_exists('PodW_Setting')) {
       echo '<input type="text" style="width: 35rem" name="podw_apiKey" value="' . $podw_apiKey . '" />';
     }
 
-    public static function echo_page_field()
-    {
-      $pages = get_pages();
-      $podw_page = get_option('podw_page');
-
-      echo '<select name="podw_page">';
-      foreach ($pages as $page) {
-        $isSelected = $podw_page == $page->ID ? 'selected' : '';
-        echo '<option value="' . $page->ID . '" ' . $isSelected . '>' . $page->post_title . '</option>';
-      }
-      echo '</select>';
-    }
-
     public static function set_option_page()
     {
       add_options_page(
@@ -52,8 +39,6 @@ if (!class_exists('PodW_Setting')) {
     {
       register_setting('podw-settings-group', 'podw_apiKey');
 
-      register_setting('podw-settings-group', 'podw_page');
-
       add_settings_section(
         'podw-section',
         null,
@@ -65,14 +50,6 @@ if (!class_exists('PodW_Setting')) {
         'podw_apiKey',
         'API Key:',
         ['PodW_Setting', 'echo_api_key_field'],
-        'podw-settings-group',
-        'podw-section'
-      );
-
-      add_settings_field(
-        'podw_page',
-        'Page:',
-        ['PodW_Setting', 'echo_page_field'],
         'podw-settings-group',
         'podw-section'
       );
