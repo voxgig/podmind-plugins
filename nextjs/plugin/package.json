@@ -1,6 +1,6 @@
 {
-  "name": "@lmscunha/podw-next",
-  "version": "0.0.5",
+  "name": "@voxgig/podw-next",
+  "version": "1.0.0",
   "description": "Next.js component to use the Podmind widget",
   "main": "dist/pdw-next.umd.js",
   "module": "dist/podw-next.mjs",
