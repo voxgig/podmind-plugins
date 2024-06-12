@@ -28,8 +28,11 @@ if (!class_exists('PodW_Plugin')) {
     {
       $podw_css = esc_attr(get_option('podw_css'));
       $podw_apiKey = esc_attr(get_option('podw_apiKey'));
+      $podw_debug = esc_attr(get_option('podw_debug'));
+
       return '<div style="' . $podw_css . '"><voxgig-podmind-ask apikey="' .
-        $podw_apiKey . '" debug="true"></voxgig-podmind-ask></div>';
+        $podw_apiKey . '" debug="' . $podw_debug .
+        '"></voxgig-podmind-ask></div>';
     }
 
     public static function register_shortcodes()

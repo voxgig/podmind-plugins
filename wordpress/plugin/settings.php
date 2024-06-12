@@ -15,7 +15,7 @@ if (!class_exists('PodW_Setting')) {
           ?>
         </form>
       </div>
-<?php
+    <?php
     }
 
     public static function echo_container_css_field()
@@ -29,6 +29,19 @@ if (!class_exists('PodW_Setting')) {
     {
       $podw_apiKey = esc_attr(get_option('podw_apiKey'));
       echo '<input type="text" name="podw_apiKey" value="' . $podw_apiKey . '" size="80"/>';
+    }
+
+    public static function echo_debug_field()
+    {
+      $podw_debug = esc_attr(get_option('podw_debug'));
+    ?>
+
+      <select name="podw_debug">
+        <option value="false" <?php selected($podw_debug, 'false'); ?>>false</option>
+        <option value="true" <?php selected($podw_debug, 'true'); ?>>true</option>
+      </select>
+
+<?php
     }
 
     public static function set_option_page()
@@ -52,6 +65,19 @@ if (!class_exists('PodW_Setting')) {
 
       register_setting('podw-settings-group', 'podw_apiKey');
 
+      register_setting('podw-settings-group', 'podw_debug', [
+        'default' => 'false',
+        'sanitize_callback' => function ($value) {
+          $allowed_values = ['true', 'false'];
+
+          if (in_array($value, $allowed_values)) {
+            return $value;
+          }
+
+          return 'false';
+        }
+      ]);
+
       add_settings_section(
         'podw-section',
         null,
@@ -71,6 +97,14 @@ if (!class_exists('PodW_Setting')) {
         'podw_apiKey',
         'API Key:',
         ['PodW_Setting', 'echo_api_key_field'],
+        'podw-settings-group',
+        'podw-section'
+      );
+
+      add_settings_field(
+        'podw_debug',
+        'Debug Mode:',
+        ['PodW_Setting', 'echo_debug_field'],
         'podw-settings-group',
         'podw-section'
       );
