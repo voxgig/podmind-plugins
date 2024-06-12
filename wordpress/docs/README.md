@@ -18,7 +18,7 @@ zip podmind_widget.zip *
 ```php
 [podmindwidget]
 ```
--Once you save the changes, you should be able to see the widget and set its [settings](#settings):
+- Once you save the changes, you should be able to see the widget and set its [settings](#settings):
 
 <img width="1726" alt="Screenshot 2024-06-12 at 12 55 29 PM" src="https://github.com/lmscunha/podmind-plugins/assets/65237061/cdd9fd35-b1ca-4663-af79-a8f1400eb2fe">
 
