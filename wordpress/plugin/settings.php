@@ -18,10 +18,17 @@ if (!class_exists('PodW_Setting')) {
 <?php
     }
 
+    public static function echo_container_css_field()
+    {
+      $podw_css = esc_attr(get_option('podw_css'));
+      $podw_css = safecss_filter_attr($podw_css);
+      echo '<input type="text" name="podw_css" value="' . $podw_css . '" size="80"/>';
+    }
+
     public static function echo_api_key_field()
     {
       $podw_apiKey = esc_attr(get_option('podw_apiKey'));
-      echo '<input type="text" style="width: 35rem" name="podw_apiKey" value="' . $podw_apiKey . '" />';
+      echo '<input type="text" name="podw_apiKey" value="' . $podw_apiKey . '" size="80"/>';
     }
 
     public static function set_option_page()
@@ -37,6 +44,12 @@ if (!class_exists('PodW_Setting')) {
 
     public static function set_settings()
     {
+      register_setting('podw-settings-group', 'podw_css', [
+        'sanitize_callback' => function ($css) {
+          return safecss_filter_attr($css);
+        }
+      ]);
+
       register_setting('podw-settings-group', 'podw_apiKey');
 
       add_settings_section(
@@ -44,6 +57,14 @@ if (!class_exists('PodW_Setting')) {
         null,
         null,
         'podw-settings-group'
+      );
+
+      add_settings_field(
+        'podw_css',
+        'Container CSS:',
+        ['PodW_Setting', 'echo_container_css_field'],
+        'podw-settings-group',
+        'podw-section'
       );
 
       add_settings_field(
