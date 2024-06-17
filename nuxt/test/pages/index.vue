@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='main'>
     <h1>
       Podmind Test
     </h1>
@@ -13,13 +13,13 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'PodW',
   head() {
     return {
-      title: 'test',
+      title: 'PodmindScript',
       script: [
         {
-          hid: 'podmind',
+          hid: 'podw-script',
           async: true,
           src: 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
         }
@@ -28,3 +28,11 @@ export default {
   },
 }
 </script>
+
+<style>
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
