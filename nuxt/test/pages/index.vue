@@ -4,28 +4,25 @@
       Podmind Test
     </h1>
 
-    <voxgig-podmind-ask apikey="your-api-key" debug="true">
-    </voxgig-podmind-ask>
+    <PodW />
   </div>
 </template>
 
 
 
 <script>
+import { addComponent, defineNuxtModule } from '@nuxt/kit'
+import PodW from '@voxgig/podw-nuxt'
+
 export default {
-  name: 'PodW',
-  head() {
-    return {
-      title: 'PodmindScript',
-      script: [
-        {
-          hid: 'podw-script',
-          async: true,
-          src: 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
-        }
-      ]
-    }
+  setup() {
+    addComponent({
+      name: 'PodW',
+      export: 'PodW',
+      filePath: '@voxgig/podw-nuxt',
+    })
   },
+  name: 'Test',
 }
 </script>
 
