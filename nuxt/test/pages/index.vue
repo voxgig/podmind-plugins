@@ -11,16 +11,16 @@
 
 
 <script>
-import { addComponent, defineNuxtModule } from '@nuxt/kit'
+// import { addComponent, defineNuxtModule } from '@nuxt/kit'
 import PodW from '@voxgig/podw-nuxt'
 
 export default {
   setup() {
-    addComponent({
-      name: 'PodW',
-      export: 'PodW',
-      filePath: '@voxgig/podw-nuxt',
-    })
+    // addComponent({
+    //   name: 'PodW',
+    //   export: 'PodW',
+    //   filePath: '@voxgig/podw-nuxt',
+    // })
   },
   name: 'Test',
 }
