@@ -1,12 +1,12 @@
 <script setup>
-import PodW from './components/PodW.vue' 
+import PodW from '@voxgig/podw-vue'
 </script>
 
 <template>
   <div class="main">
     <h1>Podmind Test</h1>
 
-    <PodW apikey="your-api-key" debug="true" />
+    <PodW apikey="your-api-key" />
   </div>
 </template>
 
