@@ -1,6 +1,6 @@
 {
   "name": "@voxgig/podw-docusaurus",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Docusaurus wrapper to use the Podmind widget",
   "main": "dist/podw-docusaurus.umd.js",
   "module": "dist/podw-docusaurus.mjs",
