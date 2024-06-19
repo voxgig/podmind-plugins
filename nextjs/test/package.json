@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@voxgig/podw-next": "^1.0.2",
+    "@voxgig/podw-next": "^1.0.3",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18"
