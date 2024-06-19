@@ -17,8 +17,8 @@ import PodW from '@voxgig/podw-vue'
     <PodW apikey="your-api-key" />
 </template>
 ```
-1. You must pass the following prop:
-- `apikey` - The API key provided by Voxgig.
+- You must pass the following prop:
+    - `apikey` - The API key provided by Voxgig.
 
 ## Debugging
 - You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
