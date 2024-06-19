@@ -10,14 +10,11 @@ npm i @voxgig/podw-next
 - After the package is installed, import and add the lib component similar to the following:
 ```javascript
 'use client'
-import styles from "./page.module.css"
 import PodW from '@voxgig/podw-next'
 
-export default function Home() {
+export default function YourComponent() {
   return (
-    <main className={styles.main}>
       <PodW apikey="your-api-key" />
-    </main >
   );
 }
 ```
