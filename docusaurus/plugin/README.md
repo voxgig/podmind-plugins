@@ -15,16 +15,10 @@ import Head from '@docusaurus/Head';
 
 export default function YourComponent() {
   return (
-    <>
-        <h1>
-          Podmind Test
-        </h1>
-
-        <PodW
-          Head={Head}
-          apikey="your-api-key"
-         />
-    </>
+    <PodW
+      Head={Head}
+      apikey="your-api-key"
+     />
   );
 }
 
