@@ -6,19 +6,16 @@
 
 
 <script>
-export default {
+export default defineNuxtComponent({
   name: 'PodW',
-  head() {
-    return {
-      title: 'PodmindScript',
-      script: [
-        {
-          hid: 'podw-script',
-          async: true,
-          src: 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
-        }
-      ]
-    }
-  },
-}
+  head: {
+    script: [
+      {
+        hid: 'podw-script',
+        async: true,
+        src: 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
+      }
+    ]
+  }
+})
 </script>
