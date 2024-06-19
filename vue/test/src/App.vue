@@ -1,15 +1,12 @@
 <script setup>
-import { useScriptTag } from '@vueuse/core'
-
-useScriptTag('https://podmind.voxgig.com/widget/voxgig-podmind-ask.js')
+import PodW from './components/PodW.vue' 
 </script>
 
 <template>
   <div class="main">
     <h1>Podmind Test</h1>
 
-    <voxgig-podmind-ask apikey="your-api-key" debug="true">
-    </voxgig-podmind-ask>
+    <PodW />
   </div>
 </template>
 
