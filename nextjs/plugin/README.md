@@ -18,8 +18,9 @@ export default function YourComponent() {
   );
 }
 ```
+- You must pass the following prop:
+    - `apikey` - The API key provided by Voxgig.
 - Highliting the use of the `'use client'` [directive from React](https://nextjs.org/docs/app/building-your-application/rendering/client-components#using-client-components-in-nextjs).
-
 
 ## Debugging
 - You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
