@@ -6,7 +6,7 @@ import PodW from './components/PodW.vue'
   <div class="main">
     <h1>Podmind Test</h1>
 
-    <PodW />
+    <PodW apikey="your-api-key" debug="true" />
   </div>
 </template>
 
