@@ -15,9 +15,14 @@
     }
   },
   "scripts": {
-    "dev": "vite",
+    "test": "echo test",
     "build": "vite build",
-    "preview": "vite preview"
+    "clean": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "reset": "npm run clean && npm install && npm run build && npm run test",
+    "repo-check": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && [[ '' == `git tag --list v${REPO_VERSION}` ]]",
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push && git tag v$REPO_VERSION && git push --tags;",
+    "repo-publish": "npm run repo-check && npm run clean && npm install --registry https://registry.npmjs.org && npm run build && npm test && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public",
+    "repo-publish-quick": "npm run repo-check && npm run build && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public"
   },
   "peerDependencies": {
     "@vueuse/core": "^10.11.0",
@@ -29,5 +34,6 @@
     "vite": "^5.3.1",
     "vite-plugin-dts": "^3.9.1",
     "vue": "^3.4.29"
-  }
+  },
+  "license": "MIT"
 }
