@@ -1,3 +1,1 @@
-export default defineNuxtConfig({
-  modules: ['@voxgig/podw-vue']
-})
+export default defineNuxtConfig({})
