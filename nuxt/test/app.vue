@@ -1,9 +1,13 @@
 <template>
   <div class="main">
     <h1>Podmind Test</h1>
-    <PodW />
+    <PodW apikey="your-api-key" />
   </div>
 </template>
+
+<script setup>
+import PodW from '@voxgig/podw-vue'
+</script>
 
 <style>
 .main {
