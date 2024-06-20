@@ -1,6 +1,5 @@
 # Vue Podmind Widget
 
-
 ## Install 
 - In your app root directory, run:
 ```bash
