@@ -1,17 +1,17 @@
 {
   "name": "@voxgig/podw-vue",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "Vue wrapper to use the Podmind widget",
-  "main": "dist/podw-vue.umd.js",
-  "module": "dist/podw-vue.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/podw-vue.umd.js",
+  "module": "./dist/podw-vue.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "dist/podw-vue.mjs",
-      "require": "dist/podw-vue.umd.js"
+      "import": "./dist/podw-vue.mjs",
+      "require": "./dist/podw-vue.umd.js"
     }
   },
   "scripts": {
