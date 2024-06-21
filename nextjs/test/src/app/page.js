@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <PodW
         apikey="your-api-key"
-        debug="true" />
+      />
     </main >
   );
 }
