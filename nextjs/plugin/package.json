@@ -1,17 +1,17 @@
 {
   "name": "@voxgig/podw-next",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Next.js wrapper to use the Podmind widget",
-  "main": "dist/podw-next.umd.js",
-  "module": "dist/podw-next.mjs",
-  "types": "dist/voxgig-model-react.d.ts",
+  "main": "./dist/podw-next.umd.js",
+  "module": "./dist/podw-next.mjs",
+  "types": "./dist/voxgig-model-react.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "dist/podw-next.mjs",
-      "require": "dist/podw-next.umd.js"
+      "import": "./dist/podw-next.mjs",
+      "require": "./dist/podw-next.umd.js"
     }
   },
   "scripts": {
