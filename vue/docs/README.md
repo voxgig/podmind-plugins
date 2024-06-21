@@ -33,7 +33,7 @@ import PodW from '@voxgig/podw-vue'
 ```bash
 npm i @vueuse/core
 ```
-- Pass the widget url to the [useScriptTag](https://vueuse.org/core/useScriptTag/#usescripttag):
+- Pass the widget URL to the [useScriptTag](https://vueuse.org/core/useScriptTag/#usescripttag):
 ```javascript
 useScriptTag('https://podmind.voxgig.com/widget/voxgig-podmind-ask.js')
 ```
