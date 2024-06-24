@@ -1,8 +1,13 @@
-// import logo from './logo.svg';
+import { useEffect } from 'react'
 
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = "https://podmind.voxgig.com/widget/voxgig-podmind-ask.js"
+    return () => document.head.appendChild(script)
+  }, [])
 
   return (
     <>
