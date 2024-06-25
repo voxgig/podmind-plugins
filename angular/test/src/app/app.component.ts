@@ -22,7 +22,7 @@ export class AppComponent {
     @Inject(DOCUMENT) private document: Document
   ) { }
 
-  title = 'test';
+  title = 'Podmind Test';
 
   ngOnInit() {
     const script = this.render2.createElement('script')
