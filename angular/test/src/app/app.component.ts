@@ -1,18 +1,18 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, Renderer2, Inject } from '@angular/core';
+import { Component, Renderer2, Inject, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DOCUMENT } from '@angular/common'
+import { PodWComponent } from './pod-w/pod-w.component'
+import { PodWAttr } from './pod-w-attr';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PodWComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 
@@ -23,6 +23,11 @@ export class AppComponent {
   ) { }
 
   title = 'Podmind Test';
+
+  podw: PodWAttr = {
+    "apikey": "your-api-key",
+    "debug": "true",
+  };
 
   ngOnInit() {
     const script = this.render2.createElement('script')
