@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PodWComponent } from './pod-w.component';
+import { PodwAngularComponent } from './podw-angular.component';
 
-describe('PodWComponent', () => {
-  let component: PodWComponent;
-  let fixture: ComponentFixture<PodWComponent>;
+describe('PodwAngularComponent', () => {
+  let component: PodwAngularComponent;
+  let fixture: ComponentFixture<PodwAngularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PodWComponent]
+      imports: [PodwAngularComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PodWComponent);
+    fixture = TestBed.createComponent(PodwAngularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
