@@ -1,6 +1,6 @@
 {
   "name": "@voxgig/podw-vue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Vue wrapper to use the Podmind widget",
   "main": "./dist/podw-vue.umd.js",
   "module": "./dist/podw-vue.mjs",
