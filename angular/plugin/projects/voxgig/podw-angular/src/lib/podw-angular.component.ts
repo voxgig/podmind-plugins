@@ -7,16 +7,10 @@ import { PodWAttr } from './pod-wattr';
   standalone: true,
   imports: [],
   template: `
-  <div>
-    <p>
-      podw-angular works! 3
-    </p>
-
-     <voxgig-podmind-ask
-     [attr.apikey]="podw.apikey"
-     [attr.debug]="podw.debug">
-     </voxgig-podmind-ask>
-    </div>
+   <voxgig-podmind-ask
+   [attr.apikey]="podw.apikey"
+   [attr.debug]="podw.debug">
+   </voxgig-podmind-ask>
   `,
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
