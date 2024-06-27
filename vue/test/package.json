@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@voxgig/podw-vue": "^1.0.4",
+    "@voxgig/podw-vue": "^1.0.5",
     "@vueuse/core": "^10.11.0",
-    "vue": "^3.4.29"
+    "vue": "^3.4.30"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
