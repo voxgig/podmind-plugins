@@ -1,5 +1,5 @@
 <script>
-  import PodW from "./PodW.svelte";
+  import PodW from "@voxgig/podw-svelte";
 </script>
 
 <section>
