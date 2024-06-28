@@ -1,15 +1,11 @@
 <script>
+  import PodW from "./PodW.svelte";
 </script>
-
-<svelte:head>
-  <script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js">
-  </script>
-</svelte:head>
 
 <section>
   <h1>Podmind Test</h1>
 
-  <voxgig-podmind-ask apikey="your-api-key" debug="true"> </voxgig-podmind-ask>
+  <PodW apikey="your-api-key" />
 </section>
 
 <style>
