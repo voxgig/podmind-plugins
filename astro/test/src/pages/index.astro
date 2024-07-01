@@ -1,15 +1,12 @@
 ---
+import PodW from "../components/PodW.astro"
 ---
 
 <div class="main">
   <h1>Podmind Test</h1>
   <script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js" is:inline></script>
 
-  <voxgig-podmind-ask
-    apikey="your-api-key"
-    debug="true"
-  >
-  </voxgig-podmind-ask>
+  <PodW apikey="your-api-key"/>
 </div>
 
 <style>
