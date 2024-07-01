@@ -1,0 +1,23 @@
+{
+  "name": "@voxgig/podw-astro",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "src",
+    "index.ts"
+  ],
+  "keywords": [
+    "astro-component",
+    "withastro"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "astro": "^4.11.3"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0"
+  }
+}
