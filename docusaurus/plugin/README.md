@@ -2,6 +2,7 @@
 
 
 ## Install 
+
 - In your app root directory, run:
 
 ```bash
@@ -21,14 +22,15 @@ export default function YourComponent() {
      />
   );
 }
-
 ```
 - You must pass the following props:
     - `Head` - Docusaurus Head built-in component.
     - `apikey` - The API key provided by Voxgig.
 
 ## Debugging
+
 - You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
+
 ```javascript
 <PodW
  Head={Head}
@@ -38,6 +40,7 @@ export default function YourComponent() {
 ```
 
 - Resulting in a log similar to the:
+
 ```bash
 apikey: "your-api-key"
 debug: true
