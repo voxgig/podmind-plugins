@@ -2,6 +2,7 @@
   "name": "@voxgig/podw-astro",
   "version": "0.0.1",
   "type": "module",
+  "description": "Astro wrapper to use the Podmind widget",
   "exports": {
     ".": "./index.ts"
   },
@@ -13,7 +14,14 @@
     "astro-component",
     "withastro"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "echo test",
+    "clean": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "reset": "npm run clean && npm install && npm run test",
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push",
+    "repo-publish": "npm run clean && npm install --registry https://registry.npmjs.org && npm run build && npm test && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public",
+    "repo-publish-quick": "npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public"
+  },
   "devDependencies": {
     "astro": "^4.11.3"
   },

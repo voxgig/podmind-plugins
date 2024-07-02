@@ -6,9 +6,12 @@ interface Props {
 
 const {apikey, debug} = Astro.props
 ---
+<script 
+  is:inline 
+  async 
+  src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js" >
+</script>
 
-<script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js" is:inline></script>
-  
 <voxgig-podmind-ask
  apikey={apikey}
  debug={debug}
