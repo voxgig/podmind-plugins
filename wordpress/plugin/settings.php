@@ -1,4 +1,5 @@
 <?php
+
 if (!class_exists('PodW_Setting')) {
   class PodW_Setting
   {
