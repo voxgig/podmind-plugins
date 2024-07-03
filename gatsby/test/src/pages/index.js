@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Script } from "gatsby"
+// import { Script } from "gatsby"
+import PodW from '@voxgig/podw-gatsby'
 
 const pageStyles = {
   color: "#232129",
@@ -10,24 +11,12 @@ const pageStyles = {
   alignItems: "center",
 }
 
-const widget = {
-  marginTop: "2rem",
-  maxWidth: "45rem",
-  width: "100%"
-}
-
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <h1>Test Podmind</h1>
 
-      <Script async src="https://podmind.voxgig.com/widget/voxgig-podmind-ask.js" />
-      <div style={widget}>
-        <voxgig-podmind-ask
-          apikey="your-api-key"
-        >
-        </voxgig-podmind-ask>
-      </div>
+      <PodW apikey="your-api-key" />
     </main >
   )
 }
