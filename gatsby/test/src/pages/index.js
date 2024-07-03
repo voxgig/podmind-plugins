@@ -25,7 +25,7 @@ const IndexPage = () => {
       <div style={widget}>
         <voxgig-podmind-ask
           apikey="your-api-key"
-          debug="true">
+        >
         </voxgig-podmind-ask>
       </div>
     </main >
@@ -33,5 +33,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-export const Head = () => <title>Test Podmind</title>
