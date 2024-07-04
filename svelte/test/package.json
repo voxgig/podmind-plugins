@@ -17,6 +17,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@voxgig/podw-svelte": "^0.0.1"
+		"@voxgig/podw-svelte": "^1.0.1"
 	}
 }
