@@ -11,7 +11,7 @@ import { PodWComponent } from '@voxgig/podw-angular'
     <main class="main">
       <h1>{{ title }}</h1>
 
-      <lib-podw[podWAttr]="podWAttr" />
+      <lib-podw[podw]="podWAttr"></lib-podw>
     </main>
   `,
   styles: `

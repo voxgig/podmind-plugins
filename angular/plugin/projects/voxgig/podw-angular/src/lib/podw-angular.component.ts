@@ -3,13 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, Inject, Input } from '@angular/core'
 import { PodWAttr } from './pod-wattr';
 
 @Component({
-  selector: 'lib-podw',
+  selector: 'lib-podmind-widget',
   standalone: true,
   imports: [],
   template: `
    <voxgig-podmind-ask
-   [attr.apikey]="podWAttr.apikey"
-   [attr.debug]="podWAttr.debug">
+   [attr.apikey]="podw.apikey"
+   [attr.debug]="podw.debug">
    </voxgig-podmind-ask>
   `,
   styles: ``,
@@ -21,7 +21,7 @@ export class PodWComponent {
     @Inject(DOCUMENT) private document: Document
   ) { }
 
-  @Input() podWAttr!: PodWAttr
+  @Input() podw!: PodWAttr
 
   ngOnInit() {
     const script = this.document.createElement('script')
