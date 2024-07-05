@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { PodWAttr } from './pod-wattr';
-import { PodwAngularComponent } from '@voxgig/podw-angular'
+import { PodWComponent } from '@voxgig/podw-angular'
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PodwAngularComponent],
+  imports: [PodWComponent],
   template: `
     <main class="main">
       <h1>{{ title }}</h1>
 
-      <lib-podw-angular [podw]="podw"></lib-podw-angular>
+      <lib-podw[podWAttr]="podWAttr" />
     </main>
   `,
   styles: `
@@ -27,7 +27,7 @@ import { PodwAngularComponent } from '@voxgig/podw-angular'
 export class AppComponent {
   title = 'Podmind Test';
 
-  podw: PodWAttr = {
+  podWAttr: PodWAttr = {
     "apikey": "your-api-key",
     "debug": "true",
   };
