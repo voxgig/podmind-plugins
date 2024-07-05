@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "clean": "rm -rf node_modules package-lock.json && npm i && npm link @voxgig/podw-angular",
-    "reset": "npm run clean && npm run start",
+    "clean": "rm -rf node_modules package-lock.json && npm i",
+    "reset": "npm run clean && npm run link && npm run start",
+    "link": "npm link @voxgig/podw-angular",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
