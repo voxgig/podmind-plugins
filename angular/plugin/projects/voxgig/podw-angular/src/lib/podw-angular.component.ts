@@ -28,6 +28,7 @@ export class PodwAngularComponent {
     const script = this.render2.createElement('script')
     script.type = 'text/javascript'
     script.src = 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
+    script.async = true
     this.render2.appendChild(this.document.body, script)
   }
 }
