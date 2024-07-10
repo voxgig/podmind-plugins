@@ -3,6 +3,7 @@ import { useEffect } from "react";
 function PodW({ apikey, debug }) {
   useEffect(() => {
     const script = document.createElement('script')
+    script.async = true
     script.src = "https://podmind.voxgig.com/widget/voxgig-podmind-ask.js"
     return () => document.head.appendChild(script)
   }, [])
