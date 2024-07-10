@@ -25,8 +25,8 @@ export class PodWComponent {
 
   ngOnInit() {
     const script = this.document.createElement('script')
-    script.src = 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
     script.async = true
-    this.document.head.appendChild(script)
+    script.src = 'https://podmind.voxgig.com/widget/voxgig-podmind-ask.js'
+    return this.document.head.appendChild(script)
   }
 }
