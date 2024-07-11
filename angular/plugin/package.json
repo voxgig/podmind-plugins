@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start-test": "ng serve test --open",
+    "start-app": "ng serve test --open",
     "build-lib": "ng build @voxgig/podw-angular",
-    "build-test": "ng build test",
+    "build-app": "ng build test",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test-lib": "ng test @voxgig/podw-angular",
+    "test-app": "ng test test"
   },
   "private": true,
   "dependencies": {
