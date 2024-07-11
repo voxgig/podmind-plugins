@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "link": "npm link dist/voxgig/podw-angular",
-    "build": "ng build",
+    "start-test": "ng serve test --open",
+    "build-lib": "ng build @voxgig/podw-angular",
+    "build-test": "ng build test",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
