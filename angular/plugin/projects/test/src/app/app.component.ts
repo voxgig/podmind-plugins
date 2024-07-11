@@ -14,7 +14,6 @@ export class AppComponent {
   title = 'test';
 
   podWAttr: PodWAttr = {
-    "apikey": "your-api-key",
-    "debug": "true",
+    "apikey": "your-api-key"
   };
 }
