@@ -1,24 +1,54 @@
-# PodwAngular
+# Angular Podmind Widget
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+## Install 
 
-## Code scaffolding
+- In your app root directory, run:
 
-Run `ng generate component component-name --project podw-angular` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project podw-angular`.
-> Note: Don't forget to add `--project podw-angular` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm i @voxgig/podw-angular
+```
 
-## Build
+- After the package is installed, import and add the lib component similar to the following:
 
-Run `ng build podw-angular` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+import { Component } from '@angular/core';
+import { PodWComponent } from '@voxgig/podw-angular'
+import { PodWAttr } from './pod-wattr'
 
-## Publishing
+@Component({
+  imports: [PodWComponent]
+})
 
-After building your library with `ng build podw-angular`, go to the dist folder `cd dist/podw-angular` and run `npm publish`.
+export class YourComponent {
+  podWAttr: PodWAttr = {
+    "apikey": "your-api-key"
+  };
+}
+```
+- You must pass the following prop through an interface:
+    - `apikey` - The API key provided by Voxgig.
 
-## Running unit tests
+- Then add to your template file:
 
-Run `ng test podw-angular` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<lib-podmind-widget [podw]="podWAttr" />
+```
 
-## Further help
+## Debugging
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- You can pass the prop `debug` to the interface. To log widget properties:
+
+```typescript
+podWAttr: PodWAttr = {
+"apikey": "your-api-key",
+"debug": "true"
+};
+```
+
+- Resulting in a log similar to the:
+
+```bash
+apikey: "your-api-key"
+debug: true
+mark: "20e1a7d5"
+```
