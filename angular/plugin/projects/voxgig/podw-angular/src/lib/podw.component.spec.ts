@@ -17,13 +17,15 @@ describe('PodWComponent', () => {
     testHostFixture.detectChanges();
   });
 
-  it('should have the apikey attribute', () => {
+  it('should have the apikey and debug attributes', () => {
     const element = testHostFixture
       .nativeElement
       .querySelector('voxgig-podmind-ask')
 
     expect(testHostFixture).toBeTruthy();
     expect(element.hasAttribute('apikey')).toBeTruthy();
+    expect(element.getAttribute('apikey')).toEqual('test');
+    expect(element.hasAttribute('debug')).toBeTruthy();
   });
 
   @Component({
@@ -34,7 +36,8 @@ describe('PodWComponent', () => {
   })
   class TestHostComponent {
     podWAttr: PodWAttr = {
-      "apikey": "test"
+      "apikey": "test",
+      "debug": "true"
     }
   }
 });

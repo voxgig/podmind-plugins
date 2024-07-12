@@ -15,7 +15,6 @@ import { PodWAttr } from './pod-wattr';
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-
 export class PodWComponent {
   constructor(
     @Inject(DOCUMENT) private document: Document
