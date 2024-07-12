@@ -10,7 +10,6 @@ import { PodWAttr } from './pod-wattr'
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-
 export class AppComponent {
   title = 'test';
 
