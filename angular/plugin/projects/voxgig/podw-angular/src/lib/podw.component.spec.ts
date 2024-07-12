@@ -1,23 +1,40 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 import { PodWComponent } from './podw.component';
+import { PodWAttr } from './pod-wattr';
 
-describe('PodwAngularComponent', () => {
-  let component: PodWComponent;
-  let fixture: ComponentFixture<PodWComponent>;
+describe('PodWComponent', () => {
+  let testHostFixture: ComponentFixture<TestHostComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PodWComponent]
+      imports: [TestHostComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(PodWComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    testHostFixture = TestBed.createComponent(TestHostComponent);
+    testHostFixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have the apikey attribute', () => {
+    const element = testHostFixture
+      .nativeElement
+      .querySelector('voxgig-podmind-ask')
+
+    expect(testHostFixture).toBeTruthy();
+    expect(element.hasAttribute('apikey')).toBeTruthy();
   });
+
+  @Component({
+    selector: `host-component`,
+    standalone: true,
+    template: `<lib-podmind-widget [podw]="podWAttr" />`,
+    imports: [PodWComponent]
+  })
+  class TestHostComponent {
+    podWAttr: PodWAttr = {
+      "apikey": "test"
+    }
+  }
 });
