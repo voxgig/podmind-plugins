@@ -1,6 +1,7 @@
 {
   "name": "@voxgig/podw-angular",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "description": "Angular wrapper to use the Podmind widget",
   "scripts": {
     "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push",
     "repo-publish": "npm run repo-tag && cd ../../../ && ng build @voxgig/podw-angular && cd dist/voxgig/podw-angular/ && npm publish --access public"
