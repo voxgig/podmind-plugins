@@ -27,7 +27,7 @@ export default YourComponent
 
 ## Debugging
 
-- You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
+- To log widget properties, you can pass the prop `debug` to the lib component:
 
 ```javascript
 <PodW
