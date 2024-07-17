@@ -1,0 +1,18 @@
+{
+  "name": "@voxgig/podw-angular",
+  "version": "1.0.3",
+  "description": "Angular wrapper to use the Podmind widget",
+  "scripts": {
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push",
+    "repo-publish": "npm run repo-tag && cd ../../../ && ng build @voxgig/podw-angular && cd dist/voxgig/podw-angular/ && npm publish --access public"
+  },
+  "peerDependencies": {
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "license": "MIT"
+}
