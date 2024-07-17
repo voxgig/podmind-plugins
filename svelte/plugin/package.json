@@ -1,6 +1,6 @@
 {
   "name": "@voxgig/podw-svelte",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Svelte wrapper to use the Podmind widget",
   "scripts": {
     "test": "echo test",
