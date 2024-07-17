@@ -36,7 +36,7 @@ export class YourComponent {
 
 ## Debugging
 
-- You can pass the prop `debug` to the interface. To log widget properties:
+- You can pass the attribute `debug` to the `podWAttr` property. To log widget properties:
 
 ```typescript
 podWAttr: PodWAttr = {
@@ -45,7 +45,7 @@ podWAttr: PodWAttr = {
 };
 ```
 
-- Resulting in a log similar to the:
+- Resulting in a log similar to the following:
 
 ```bash
 apikey: "your-api-key"
