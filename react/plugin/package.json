@@ -1,0 +1,40 @@
+{
+  "name": "@voxgig/podw-react",
+  "version": "1.1.1",
+  "description": "React wrapper to use the Podmind widget",
+  "main": "./dist/podw-react.umd.js",
+  "module": "./dist/podw-react.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/podw-react.mjs",
+      "require": "./dist/podw-react.umd.js"
+    }
+  },
+  "scripts": {
+    "test": "echo test",
+    "build": "vite build",
+    "clean": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "reset": "npm run clean && npm install && npm run build && npm run test",
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push",
+    "repo-publish": "npm run clean && npm install --registry https://registry.npmjs.org && npm run build && npm test && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public",
+    "repo-publish-quick": "npm run build && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.3.2",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "license": "MIT"
+}
