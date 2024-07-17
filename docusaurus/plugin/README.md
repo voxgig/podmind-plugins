@@ -8,6 +8,7 @@
 ```bash
 npm i @voxgig/podw-docusaurus
 ```
+
 - After the package is installed, import and add the lib component similar to the following:
 
 ```javascript
@@ -29,7 +30,7 @@ export default function YourComponent() {
 
 ## Debugging
 
-- You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
+- To log widget properties, you can pass the prop `debug` to the lib component:
 
 ```javascript
 <PodW
