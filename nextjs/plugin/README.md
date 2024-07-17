@@ -1,13 +1,15 @@
-
 # Next.js Podmind Widget
 
 ## Install
 
 - In your app root directory, run:
+
 ```bash
 npm i @voxgig/podw-next 
 ```
+
 - After the package is installed, import and add the lib component similar to the following:
+
 ```javascript
 'use client'
 import PodW from '@voxgig/podw-next'
@@ -18,12 +20,15 @@ export default function YourComponent() {
   );
 }
 ```
+
 - You must pass the following prop:
     - `apikey` - The API key provided by Voxgig.
 - Highliting the use of the `'use client'` [directive from React](https://nextjs.org/docs/app/building-your-application/rendering/client-components#using-client-components-in-nextjs).
 
 ## Debugging
-- You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
+
+- To log widget properties, you can pass the prop `debug` to the lib component:
+
 ```javascript
 <PodW
  apikey="your-api-key"
@@ -32,6 +37,7 @@ export default function YourComponent() {
 ```
 
 - Resulting in a log similar to the:
+
 ```bash
 apikey: "your-api-key"
 debug: true
