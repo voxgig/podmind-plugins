@@ -1,6 +1,6 @@
 {
   "name": "@voxgig/podw-gatsby",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gatsby wrapper to use the Podmind widget",
   "type": "module",
   "main": "./dist/podw-gatsby.umd.cjs",
