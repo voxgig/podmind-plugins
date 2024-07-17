@@ -17,12 +17,13 @@ npm i @voxgig/podw-svelte
 
 <PodW apikey="your-api-key" />
 ```
+
 - You must pass the following prop:
     - `apikey` - The API key provided by Voxgig.
 
 ## Debugging
 
-- You can pass the prop `debug` to the lib component or directly into the widget element. To log widget properties:
+- To log widget properties, you can pass the prop `debug` to the lib component:
 
 ```javascript
 <PodW
@@ -31,7 +32,7 @@ npm i @voxgig/podw-svelte
 />
 ```
 
-- Resulting in a log similar to the:
+- Resulting in a log similar to the following:
 
 ```bash
 apikey: "your-api-key"
