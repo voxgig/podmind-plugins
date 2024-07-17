@@ -40,7 +40,7 @@ export default function YourComponent() {
 />
 ```
 
-- Resulting in a log similar to the:
+- Resulting in a log similar to the following:
 
 ```bash
 apikey: "your-api-key"
