@@ -1,0 +1,44 @@
+{
+  "name": "@voxgig/podw-svelte",
+  "version": "1.0.2",
+  "description": "Svelte wrapper to use the Podmind widget",
+  "scripts": {
+    "test": "echo test",
+    "build": "vite build && npm run package",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "clean": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "reset": "npm run clean && npm install && npm run build && npm run test",
+    "repo-tag": "REPO_VERSION=`node -e \"console.log(require('./package').version)\"` && echo TAG: v$REPO_VERSION && git commit -a -m v$REPO_VERSION && git push",
+    "repo-publish": "npm run clean && npm install --registry https://registry.npmjs.org && npm run build && npm test && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public",
+    "repo-publish-quick": "npm run build && npm run repo-tag && npm publish --registry https://registry.npmjs.org --access=public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "peerDependencies": {
+    "svelte": "^4.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/package": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "publint": "^0.1.9",
+    "svelte": "^4.2.7",
+    "tslib": "^2.4.1",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.11"
+  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "license": "MIT"
+}
